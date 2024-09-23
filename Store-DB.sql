@@ -173,7 +173,8 @@ CREATE TABLE store.store_order (
 	supplierid int4 NULL,
 	datepurchased date NULL,
 	CONSTRAINT store_order_pkey PRIMARY KEY (id),
-	CONSTRAINT store_order_supplierid_fkey FOREIGN KEY (supplierid) REFERENCES store.store_supplier(id)
+	CONSTRAINT store_order_supplierid_fkey FOREIGN KEY (supplierid) REFERENCES store.store_supplier(id),
+	CONSTRAINT store_order_employeeid_fkey FOREIGN KEY (employeeid) REFERENCES store.store_employee(id)
 );
 
 
