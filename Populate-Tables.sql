@@ -17,7 +17,8 @@ INSERT INTO store.store_item (itemname, shelfprice) VALUES
 INSERT INTO store.store_supplier (suppliername) VALUES 
 	('Fresh Farms'),
 	('Dairy Supplies'),
-	('Fruit World') ;
+	('Fruit World'),
+	('Supplier 4');
 
 INSERT INTO store.store_checkout (customerid, employeeid, checkoutdate, taxamount) VALUES 
 	(1, 1, '2024-09-01', 0.30),
@@ -31,9 +32,11 @@ INSERT INTO store.store_checkout_item (itemid, checkoutid, quantity, actualprice
 
 INSERT INTO store.store_order (supplierid, employeeid, datepurchased, received, paid) VALUES 
 	(1, 1, '2024-09-01', TRUE, TRUE),
-	(2, 2, '2024-09-03', FALSE, FALSE) ;
+	(2, 2, '2024-09-03', FALSE, FALSE),
+	(4, 2, '2024-09-05', TRUE, FALSE) ;
 
 INSERT INTO store.store_order_item (itemid, orderid, quantity, actualprice) VALUES 
 	(1, 1, 100, 45.00),
-	(3, 2, 50, 120.00) ; 
+	(3, 2, 50, 120.00),
+	(2, 3, 25, 170.68) ; 
 
