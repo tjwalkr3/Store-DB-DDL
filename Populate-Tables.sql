@@ -30,10 +30,10 @@ INSERT INTO store.store_checkout_item (itemid, checkoutid, quantity, actualprice
 	(2, 1, 3, 1.80),
 	(3, 2, 2, 5.00) ;
 
-INSERT INTO store.store_order (supplierid, employeeid, datepurchased, received, paid) VALUES 
-	(1, 1, '2024-09-01', TRUE, TRUE),
-	(2, 2, '2024-09-03', FALSE, FALSE),
-	(4, 2, '2024-09-05', TRUE, FALSE) ;
+INSERT INTO store.store_order (supplierid, employeeid, datepurchased, datereceived, datepaid) VALUES 
+	(1, 1, '2024-09-01', '2024-09-17', '2024-09-01'),
+	(2, 2, '2024-09-03', NULL, '2024-09-04'),
+	(4, 2, '2024-09-05', '2024-09-15', NULL) ;
 
 INSERT INTO store.store_order_item (itemid, orderid, quantity, actualprice) VALUES 
 	(1, 1, 100, 45.00),
